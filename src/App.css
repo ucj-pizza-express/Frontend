@@ -1,42 +1,46 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+body {
+  margin: 0;
+  background-color: #000;
+  font-family: 'Crafty Girls', cursive;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+    width: 100%;
+  
 }
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  font-size: 24px;
+  font-weight: bold;
+  color: orange;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.logo span {
+  color: #fff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border: 1px solid orange;
+  padding: 10px 20px;
+  border-radius: 25px;
+  background: linear-gradient(to right, orange, red);
 }
 
-.card {
-  padding: 2em;
+.menu a {
+  text-decoration: none;
+  color: #fff;
+  /* font-weight: bold; */
 }
 
-.read-the-docs {
-  color: #888;
+.user-icon {
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
 }
