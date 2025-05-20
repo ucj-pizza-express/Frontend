@@ -12,7 +12,9 @@ export default function Navbar() {
         <a href="#">About</a>
         <a href="#">Shop</a>
         <a href="#">Contact Us</a>
-        <FaUser className="user-icon" />
+       <div className="user-link">
+    <FaUser className="user-icon" />
+  </div>
       </div>
     </nav>
   );

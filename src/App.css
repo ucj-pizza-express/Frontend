@@ -47,6 +47,7 @@ body {
   font-size: 20px;
   color: #fff;
   cursor: pointer;
+ 
 }
 
 /* -------------------- */
@@ -72,5 +73,11 @@ body {
   .user-icon {
     width: 100%;
     text-align: left;
+    
+ 
   }
+  .user-link {
+  display: flex;
+  align-items: center;
+}
 }
