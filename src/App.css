@@ -1,8 +1,9 @@
 body {
   /* margin: 0; */
   margin: 0;
-  background-color: #000;
+  background-color: #000000;
   font-family: 'Crafty Girls', cursive;
+
 }
 
 .navbar {
@@ -35,7 +36,7 @@ body {
   border: 1px solid orange;
   padding: 10px 20px;
   border-radius: 25px;
-  background: linear-gradient(to right, orange, red);
+  background: linear-gradient(to right, rgb(20, 14, 1), rgb(255, 132, 0));
 }
 
 .menu a {
@@ -80,4 +81,55 @@ body {
   display: flex;
   align-items: center;
 }
+
+/* herosection */
+.hero-banner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-background {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  margin: 0;
+}
+
+.hero-content h2 span {
+  color: orange;
+  font-size: 28px;
+}
+
+.order-btn {
+  margin-top: 20px;
+  padding: 12px 25px;
+  border: none;
+  background: linear-gradient(to right, orange, red);
+  border-radius: 25px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.order-btn:hover {
+  opacity: 0.9;
+}
+
 }
