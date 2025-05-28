@@ -1,0 +1,121 @@
+.favourites-section {
+  background-color: #000;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.favourites-title {
+  font-size: 2.5rem;
+  color: #ffc107;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.favourites-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.pizza-card {
+  background-color: #1a1a1a;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(255, 193, 7, 0.2);
+  width: 250px;
+  transition: box-shadow 0.3s ease;
+}
+
+.pizza-card:hover {
+  box-shadow: 0 4px 20px rgba(255, 193, 7, 0.5);
+}
+
+.pizza-image {
+  width: 100%;
+  max-width: 180px;
+  height: 180px;
+  object-fit: cover;
+  margin: 0 auto 15px;
+  display: block;
+}
+
+.pizza-name {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.pizza-description {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
+.pizza-rating {
+  font-size: 1.1rem;
+  margin-top: 10px;
+}
+
+.explore-button {
+  margin-top: 40px;
+  padding: 10px 25px;
+  font-size: 1rem;
+  border: 2px solid #ffc107;
+  background-color: transparent;
+  color: #ffc107;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.explore-button:hover {
+  background-color: #ffc107;
+  color: #000;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .favourites-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pizza-card {
+    width: 90%;
+    max-width: 300px;
+  }
+
+  .favourites-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .favourites-section {
+    padding: 30px 15px;
+  }
+
+  .pizza-image {
+    max-width: 150px;
+    height: 150px;
+  }
+
+  .pizza-name {
+    font-size: 1.1rem;
+  }
+
+  .pizza-description {
+    font-size: 0.85rem;
+  }
+
+  .pizza-rating {
+    font-size: 1rem;
+  }
+
+  .explore-button {
+    padding: 8px 20px;
+    font-size: 0.95rem;
+  }
+}
