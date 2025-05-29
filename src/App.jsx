@@ -4,7 +4,7 @@ import Footer from "./Footer/Footer";
 import Testimonial from "./Footer/Testimonial";
 import Navbar from "./components/navbar"; 
 import Hero from "./components/herosection";
-import AboutSection from "./Pages/Homepage/aboutsection"
+import AboutSection from "./Pages/Homepage/AboutSection"
 import Hero2 from "./Pages/Homepage/hero2"
 import PizzaHero from './components/herosection';
 import CustomerFavourites from "./Pages/Homepage/CustomerFavourites"
