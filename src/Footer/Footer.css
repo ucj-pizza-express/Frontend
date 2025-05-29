@@ -1,0 +1,249 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Crafty+Girls&family=Cormorant+Infant&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=YourFontName:wght@700&display=swap');
+
+.footer {
+  background-color: #ac0909;
+  color: black;
+   padding: 20px 40px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  margin-top: 0;
+  padding-top: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.footer-main {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 220px;
+}
+
+.footer-section p {
+  font-family: 'Cormorant Infant', serif;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #000;
+  text-align: justify;
+  margin-left: 5px;
+}
+
+.footer-section h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: white;
+  font-family: 'Crafty Girls', cursive;
+  margin-left: 50px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  font-size: 14px;
+  font-family: 'Cormorant Infant', serif;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  text-align: left;
+  margin-left: 55px;
+}
+
+.footer-section ul li a:hover {
+  color: #ffd369;
+}
+
+.brand h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-family: 'Crafty Girls', cursive;
+}
+
+.brand-yellow {
+  color: #CE8C1B;
+}
+
+.brand-white {
+  color: white;
+}
+
+.brand-black {
+  color: black;
+}
+
+/* Social Icons */
+.social-icons {
+  margin-top: 20px;
+  display: flex;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.social-icons a.icon-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-size: 16px;
+  border: 2px solid #ffb431;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icons a.icon-circle:hover {
+  transform: scale(1.1);
+  background-color: #222;
+}
+
+/* Apply the same circle style for contact icons */
+.contact-list .icon-circle.contact-icon {
+  width: 20px;
+  height: 20px;
+  background-color: #000;
+  color: white;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  margin-right: 10px;
+  border: 2px solid #ffb431;
+  flex-shrink: 0;
+}
+
+/* Align the text next to the icons nicely */
+.contact-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  margin-left: 20px;
+}
+
+.email-input-wrapper {
+  position: relative;
+  max-width: 230px;
+  margin-left: 15px;
+}
+
+.email-input {
+  width: 100%;
+  padding: 8px 45px 8px 12px; /* Add right padding for the button */
+  border-radius: 50px;
+  border: 2px solid #ffb431;
+  background-color: black;
+  color: white;
+  font-size: 1rem;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.email-btn {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  background-color: #c30909;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+}
+
+.mail-icon {
+  color: white;
+  font-size: 14px;
+}
+
+.contact-us-btn {
+  margin-top: 12px;
+  margin-left: 50px;
+  padding: 8px 34px;
+  background-color: white;         /* white background */
+  color: black;                   /* orange text */
+  border: 2px solid #ffb431;        /* orange border */
+  border-radius: 20px;             /* oval shape */
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-us-btn:hover {
+  background-color: #ffb431;
+  color: white;                    /* text turns white on hover */
+}
+
+
+/* Footer Bottom */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row; /* Make sure this is row to align horizontally */
+  flex-wrap: wrap; /* allows wrapping on small screens */
+  padding: 15px 10px;
+  font-size: 14px;
+  color: #333;
+  border-top: 1px solid #ccc;
+  text-align: center;
+  gap: 10px; /* optional spacing */
+  font-family: 'Crafty Girls', cursive;
+}
+
+
+.footer-bottom p {
+  margin: 5px 0;
+  color: white;
+}
+
+.footer-bottom a {
+  color: white;
+  text-decoration: none;
+  margin: 0 8px;
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .footer {
+    padding: 20px 10px 25px;
+  }
+
+  .footer-section {
+    min-width: 100%;
+  }
+
+  .email-input {
+    max-width: 100%;
+  }
+
+  .footer-bottom {
+    font-size: 13px;
+  }
+}

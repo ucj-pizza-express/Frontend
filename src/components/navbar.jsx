@@ -2,6 +2,8 @@
 import React from 'react';
 import { FaUser } from 'react-icons/fa';
 import '../App.css';
+import { Link } from "react-router-dom";
+
 
 export default function Navbar() {
   return (
@@ -9,7 +11,7 @@ export default function Navbar() {
       <div className="logo">Pizza<span>Express</span>.com</div>
       <div className="menu">
         <a href="#">Home</a>
-        <a href="#">About</a>
+        <Link to="/About">About</Link>
         <a href="#">Shop</a>
         <a href="#">Contact Us</a>
        <div className="user-link">

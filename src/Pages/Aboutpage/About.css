@@ -1,0 +1,103 @@
+
+.about-us-container {
+  font-family: 'Georgia', serif;
+  color: #fff;
+  background-color: #000;
+  overflow: hidden;
+   margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.hero-section {
+  position: relative;
+  height: 100vh;
+  background-image: url('/path-to-your-image.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5;
+  overflow: hidden;
+  background-color: black;
+}
+
+.about-img {
+  width: 100vw;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6); /* dark overlay */
+  z-index: 1;
+}
+
+
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffd700; /* gold */
+  text-align: center;
+  z-index: 2;
+  padding: 1rem 2rem;
+}
+
+.hero-title {
+ font-size: 4rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+
+  background: linear-gradient(90deg, #ff8c00, #f2fa03);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* For Firefox */
+  background-clip: text;
+  color: transparent;
+}
+
+.breadcrumb {
+  font-size: 1.2rem;
+  color: #ddd;
+}
+
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin: 2rem 0 1rem;
+}
+
+.orange-yellow {
+  font-style: italic;
+    background: linear-gradient(90deg, #ff8c00, #f2fa03);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  background-clip: text;
+  color: transparent;
+}
+
+.section-box {
+  background-color: #111;
+  margin: 0 auto 1rem;
+  padding: 1.5rem 2rem;
+  max-width: 800px;
+  border-radius: 12px;
+  border: 1px solid #ce8c1b;
+ box-shadow: 0 0 10px #ce8c1b;
+ margin-bottom: 1rem;
+}
+
+.section-box ul {
+  list-style-type: disc;
+  padding-left: 18rem;
+  margin: 1rem 0;
+}
+
+.section-box li {
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
