@@ -1,11 +1,31 @@
-import './App.css'
-import Navbar from './components/navbar'
+import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import About from "./Pages/Aboutpage/About";
+import Footer from "./Footer/Footer";
+import Testimonial from "./Footer/Testimonial";
+import Navbar from "./components/navbar";  
+
+
+function Home() {
+  return (
+    <div>
+      <h1></h1>
+    </div>
+  );
+}
 
 
 function App() {
-    return ( 
-    <Navbar/>  
-)
+  return (
+    <Router>
+      <Navbar />  
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
+      <Testimonial />
+      <Footer />
+    </Router>
+  );
 }
-
-export default App
+export default App;
