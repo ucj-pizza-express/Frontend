@@ -3,10 +3,11 @@
 @import url('https://fonts.googleapis.com/css2?family=YourFontName:wght@700&display=swap');
 
 .footer {
-  background-color: #ac0909;
+  background-color: #740202;
   color: black;
    padding: 20px 40px;
   font-family: 'Roboto', sans-serif;
+  
   font-weight: 700;
   margin-top: 0;
   padding-top: 0;
@@ -245,5 +246,11 @@
 
   .footer-bottom {
     font-size: 13px;
+  }
+}
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
   }
 }
