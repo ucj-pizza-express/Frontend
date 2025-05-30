@@ -10,7 +10,7 @@ export default function Navbar() {
     <nav className="navbar">
       <div className="logo">Pizza<span>Express</span>.com</div>
       <div className="menu">
-        <a href="#">Home</a>
+        <a href="App.jsx">Home</a>
         <Link to="/About">About</Link>
         <a href="#">Shop</a>
         <a href="#">Contact Us</a>
