@@ -8,6 +8,7 @@ import AboutSection from "./Pages/Homepage/AboutSection"
 import Hero2 from "./Pages/Homepage/hero2"
 import PizzaHero from './components/herosection';
 import CustomerFavourites from "./Pages/Homepage/CustomerFavourites"
+import Contact from "./Pages/ContactUS/Contact";
 
 
 function Home() {
@@ -21,23 +22,25 @@ function Home() {
 
 function App() {
   return (
-    <Router>
-      <Navbar /> 
+    // <Router>
+    //   <Navbar /> 
       
-       <Routes>
-        <Route path="/" element={<PizzaHero/> } />
+    //    <Routes>
+    //     <Route path="/" element={<PizzaHero/> } />
         
-      </Routes> 
-      <CustomerFavourites/>
-       <Hero2/>
-      <pizzaData />
-      <AboutSection />
+    //   </Routes> 
+    //   <CustomerFavourites/>
+    //    <Hero2/>
+    //   <pizzaData />
+    //   <AboutSection />
  
       
-      <Testimonial />
-      <Footer />
+    //   <Testimonial />
+    //   <Footer />
 
-    </Router>
+    // </Router>
+    <PizzaHero/>
+    // <Contact/>
   );
 }
 export default App;

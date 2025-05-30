@@ -86,7 +86,7 @@
 }
 
 /* Social Icons */
-.social-icons {
+/* .social-icons {
   margin-top: 20px;
   display: flex;
   gap: 12px;
@@ -114,9 +114,9 @@
 }
 
 /* Apply the same circle style for contact icons */
-.contact-list .icon-circle.contact-icon {
-  width: 20px;
-  height: 20px;
+ .contact-list .icon-circle.contact-icon {
+  width: 30px;
+  height: 30px;
   background-color: #000;
   color: white;
   border-radius: 50%;
@@ -125,19 +125,40 @@
   justify-content: center;
   font-size: 10px;
   margin-right: 10px;
-  border: 2px solid #ffb431;
+  border: 2px solid #a16805;
   flex-shrink: 0;
-}
+} 
 
 /* Align the text next to the icons nicely */
-.contact-list li {
+ .contact-list li {
   display: flex;
   align-items: center;
   gap: 10px;
   margin-bottom: 10px;
   font-size: 14px;
   margin-left: 20px;
+} 
+ .social-icons {
+  margin-top: 10px;
+  display: flex;
+  gap: 15px;
+  font-size: 1.2rem;
+  color: #000;
 }
+.social-icons svg {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+  border: 2px solid solid #a16805;
+  font-size: 24px;
+  transition: transform 0.3s ease;
+}
+.social-icons svg:hover {
+  transform: scale(1.1);
+}
+
+
 
 .email-input-wrapper {
   position: relative;
