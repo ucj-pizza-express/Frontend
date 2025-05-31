@@ -5,18 +5,10 @@ import Footer from "./Footer/Footer";
 import Testimonial from "./Footer/Testimonial";
 import Navbar from "./components/navbar";  
 import Herosection from "./components/herosection";
+import AboutSection from "./Pages/Homepage/AboutSection";
+import CustomerFavourites from "./Pages/Homepage/CustomerFavourites";
+import Hero2 from "./Pages/Homepage/hero2";
 
-
-
-
-
-function Home() {
-  return (
-    <div>
-      <h1></h1>
-    </div>
-  );
-}
 
 
 function App() {
@@ -27,8 +19,6 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
       </Routes>
-      <Herosection />
-      <Testimonial />
       <Footer />
     </Router>
   );
