@@ -8,7 +8,7 @@ export default function Navbar() {
     <nav className="navbar">
       <div className="logo">Pizza<span>Express</span>.com</div>
       <div className="menu">
-        <Link to="/">Home</Link>
+        <Link to="/home">Home</Link>
         <Link to="/about">About</Link>
         <Link to="/shop">Shop</Link> {/* Assuming you'll create this later */}
         <Link to="/contact">Contact Us</Link>
