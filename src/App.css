@@ -4,6 +4,8 @@ body {
   width: 100vw;
   background-color: #000;
   font-family: 'Crafty Girls', cursive;
+  overflow-x:  hidden;
+
 }
 
 .navbar {
@@ -33,7 +35,7 @@ body {
   border: 1px solid orange;
   padding: 10px 20px;
   border-radius: 25px;
-  background: linear-gradient(to right, orange, red);
+  background: linear-gradient(to right, rgb(20, 14, 1), rgb(255, 132, 0));
 }
 
 .menu a {
@@ -54,17 +56,21 @@ body {
 
 @media (max-width: 768px) {
   .navbar {
+   
     flex-direction: column;
     align-items: flex-start;
     padding: 15px 20px;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .menu {
     flex-direction: column;
     align-items: flex-start;
-    width: 100%;
+    width: 90%;
     gap: 10px;
     margin-top: 10px;
+    
   }
 
   .menu a,
@@ -78,4 +84,5 @@ body {
   display: flex;
   align-items: center;
 }
+
 }
