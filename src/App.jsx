@@ -9,6 +9,7 @@ import Hero2 from "./Pages/Homepage/hero2"
 import PizzaHero from './components/herosection';
 import CustomerFavourites from "./Pages/Homepage/CustomerFavourites"
 import Contact from "./Pages/ContactUS/Contact";
+import OrderNow from "./Pages/Order/Orderpage";
 
 
 function Home() {
@@ -39,8 +40,9 @@ function App() {
     //   <Footer />
 
     // </Router>
-    <PizzaHero/>
-    // <Contact/>
+   // <PizzaHero/>
+    //  <Contact/>
+       <OrderNow/>
   );
 }
 export default App;

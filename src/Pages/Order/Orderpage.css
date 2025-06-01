@@ -1,0 +1,90 @@
+.order-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background: linear-gradient(to right, #ff7e00, #ffb347);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+   position: relative;
+}
+
+.order-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  
+}
+
+.order-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.order-form input,
+.order-form select,
+.order-form textarea {
+  padding: 12px;
+  border-radius: 6px;
+  border: none;
+  font-size: 1rem;
+  width: 100%;
+   background-color: #333;    /* Explicit dark background */
+  color: #fff;               /* White text */
+  box-sizing: border-box;
+}
+
+.order-form textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.order-form button {
+  padding: 10px;
+  background-color: #222;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.button-group {
+  display: flex;
+  gap: 10px; /* Adds space between buttons */
+  justify-content: center; /* Optional: center them */
+  margin-top: 20px;
+}
+
+.button-group button {
+  padding: 10px 20px;
+  font-weight: bold;
+  background-color: #222;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 14px;
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  background-color :#444;
+}
+.order-form button:hover {
+  background-color: #444;
+}
+.order-form input::placeholder,
+.order-form textarea::placeholder {
+  color: #aaa; }
+@media (max-width: 500px) {
+  .order-container {
+    margin: 20px;
+    padding: 15px;
+  }
+}
