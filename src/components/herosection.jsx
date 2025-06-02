@@ -16,6 +16,7 @@ export default function PizzaHero() {
         <Navbar/>
       </BrowserRouter>
       
+      
     <div className="pizza-hero-container">
       <img src={heroImg} alt="Pizza" className="pizza-background" />
 
@@ -25,11 +26,7 @@ export default function PizzaHero() {
         <button className="order-button">Order Now</button>
       </div>
     </div>
-     <CustomerFavourites/>
-     <Hero2/>
-    <AboutSection/>
-     <Testimonial/>
-     <Footer/>
+    
 </div>
   );
 }

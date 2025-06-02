@@ -4,6 +4,7 @@ import AboutSection from "./AboutSection";
 import CustomerFavourites from "./CustomerFavourites";
 import Hero2 from "./hero2";
 
+
 const Home = () => {
   return (
     <>
@@ -11,7 +12,7 @@ const Home = () => {
       <AboutSection />
       <CustomerFavourites />
       <Hero2 />
-    </>
+      </>
   );
 };
 
