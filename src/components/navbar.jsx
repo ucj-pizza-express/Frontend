@@ -2,18 +2,24 @@ import React from 'react';
 import { FaUser } from 'react-icons/fa';
 import { NavLink } from "react-router-dom";
 import '../App.css';
+import { Link } from "react-router-dom";
+import Contact from '../Pages/ContactUS/Contact';
 
 export default function Navbar() {
   return (
-    <nav className="navbar">
-      <div className="logo">Pizza<span>Express</span>.com</div>
-      <ul className="menu">
-        <li><NavLink to="/">Home</NavLink></li>
-        <li><NavLink to="/about">About</NavLink></li>
-        <li><NavLink to="/items">Shop</NavLink></li>
-        <li><NavLink to="/contact">Contact</NavLink></li>
-        <li><FaUser className="user-icon" /></li>
-      </ul>
+   <nav className="navbar">
+    <div className="logo">Pizza<span>Express</span>.com</div>
+      <div className="menu">
+        <Link to="/">Home</Link>
+        <Link to="/about">About</Link>
+        <Link to="/shop">Shop</Link> {/* Assuming you'll create this later */}
+        <Link to="/contact">Contact Us</Link>
+        <div className="user-link">
+          <FaUser className="user-icon" />
+        </div>
+      </div>
+
     </nav>
+
   );
 }

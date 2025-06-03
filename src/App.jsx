@@ -3,10 +3,16 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/navbar";
 import Contact from "./Pages/ContactUS/Contact";
 import OrderNow from "./Pages/Order/Orderpage";
-import Adminpanel from "./Adminpanel/Adminpanel";
-import Home from "./Pages/Homepage/Home";
-import About from "./Pages/Aboutpage/About";
-import Shop from "./Pages/Shoppage/Items";
+import About from "./Pages/Aboutpage/About"
+
+function Home() {
+  return (
+    <div>
+      <h1></h1>
+    </div>
+  );
+}
+
 
 function App() {
   return (
@@ -14,13 +20,18 @@ function App() {
       <Navbar />
       <main className="main-content">
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<PizzaHero />} />
           <Route path="/about" element={<About />} />
-          <Route path="/items" element={<Shop />} />
+          {/* <Route path="/shop" element={<Shop />} /> */}
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>
     </Router>
+
+    // </Router>
+    // <PizzaHero/>
+    //  <Contact/>
+      //  <OrderNow/>
   );
 }
 

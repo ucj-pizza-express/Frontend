@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../Order/Orderpage.css';
+import '../Order/Orderpage.css'
 
 export default function OrderNow() {
   const [form, setForm] = useState({
@@ -11,6 +11,7 @@ export default function OrderNow() {
   });
 
   const [cart, setCart] = useState([]);
+  const [showCart, setShowCart] = useState(false); // <-- Add this state
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -35,6 +36,7 @@ export default function OrderNow() {
 
     setCart([...cart, newItem]);
     alert(`Added ${form.quantity} x ${form.pizza} to cart`);
+    setShowCart(true); // <-- Show the Cart after adding
   };
 
   const handleSubmit = (e) => {
@@ -49,7 +51,7 @@ export default function OrderNow() {
       (item, index) => `${index + 1}. ${item.pizza} x ${item.quantity}`
     ).join('\n');
 
-    alert(`Order placed!\nName: ${form.name}\nPhone: ${form.phone}\nAddress: ${form.address}\n\nItems:\n${orderSummary}`);
+    alert(`Order placed!\nName: ${form.name}\nPhone: ${form.phone}\nsize: ${form.size}\nAddress: ${form.address}\n\nItems:\n${orderSummary}`);
 
     // Reset cart and form
     setCart([]);
@@ -60,13 +62,14 @@ export default function OrderNow() {
       address: '',
       phone: ''
     });
+    setShowCart(false); // Hide cart on order placed
   };
 
   return (
     <div className="order-container">
-       <button className="close-button" onClick={(onClose) => console.log('Close clicked')}>
-    &times;
-  </button>
+       <button className="close-button" onClick={() => console.log('Close clicked')}>
+         &times;
+       </button>
       <h2>Order Now</h2>
       <form onSubmit={handleSubmit} className="order-form">
         <input
@@ -77,6 +80,14 @@ export default function OrderNow() {
           onChange={handleChange}
           required
         />
+         <select name="size" value={form.pizza} onChange={handleChange} required>
+          <option value="">Select Pizza Size</option>
+          <option value="Small">Small</option>
+          <option value="Medium">Medium</option>
+          <option value="Large">Large</option>
+           <option value="ExtraLarge">ExtraLarge</option>
+        </select>
+
 
         <select name="pizza" value={form.pizza} onChange={handleChange} required>
           <option value="">Select Pizza</option>
@@ -118,16 +129,8 @@ export default function OrderNow() {
         </div>
       </form>
 
-      {cart.length > 0 && (
-        <div className="cart-summary">
-          <h3>Cart Items</h3>
-          <ul>
-            {cart.map((item, index) => (
-              <li key={index}>{item.pizza} x {item.quantity}</li>
-            ))}
-          </ul>
-        </div>
-      )}
+      {/* Show cart component when showCart is true */}
+      {showCart && <Cart cartItems={cart} />}
     </div>
   );
 }
