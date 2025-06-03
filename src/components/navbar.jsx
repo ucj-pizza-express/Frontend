@@ -2,11 +2,12 @@ import React from 'react';
 import { FaUser } from 'react-icons/fa';
 import '../App.css';
 import { Link } from "react-router-dom";
+import Contact from '../Pages/ContactUS/Contact';
 
 export default function Navbar() {
   return (
-    <nav className="navbar">
-      <div className="logo">Pizza<span>Express</span>.com</div>
+   <nav className="navbar">
+    <div className="logo">Pizza<span>Express</span>.com</div>
       <div className="menu">
         <Link to="/">Home</Link>
         <Link to="/about">About</Link>
@@ -16,6 +17,8 @@ export default function Navbar() {
           <FaUser className="user-icon" />
         </div>
       </div>
+
     </nav>
+
   );
 }
