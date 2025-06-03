@@ -26,7 +26,11 @@ export default function PizzaHero() {
         <button className="order-button">Order Now</button>
       </div>
     </div>
-    
+    <AboutSection/>
+    <CustomerFavourites/>
+    <Hero2/>
+    <Testimonial/>
+    <Footer/>
 </div>
   );
 }
