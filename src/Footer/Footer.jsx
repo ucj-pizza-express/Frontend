@@ -13,8 +13,14 @@ import { FaBeer } from "react-icons/fa";
 
 
 import "./Footer.css";
+import Contact from "../Pages/ContactUS/Contact";
 
 export default function Footer() {
+  const navigate = Contact();
+
+  const handleContactClick = () => {
+    navigate('/contact');
+  };
   return (
     <footer className="footer">
       <div className="footer-main">
@@ -95,7 +101,7 @@ export default function Footer() {
             </button>
           </div>
         {/* Contact Us button */}
-         <button className="contact-us-btn">Contact Us</button>
+         <button className="contact-us-btn" >Contact Us</button>
          </div>
         </div>
  

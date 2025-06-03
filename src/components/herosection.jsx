@@ -12,9 +12,7 @@ import { BrowserRouter, Router } from 'react-router-dom';
 export default function PizzaHero() {
   return (
     <div>
-      <BrowserRouter>
-        <Navbar/>
-      </BrowserRouter>
+      
       
     <div className="pizza-hero-container">
       <img src={heroImg} alt="Pizza" className="pizza-background" />
