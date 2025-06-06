@@ -11,6 +11,9 @@ import CustomerFavourites from "./Pages/Homepage/CustomerFavourites"
 import Contact from "./Pages/ContactUS/Contact";
 import OrderNow from "./Pages/Order/Orderpage";
 import About from "./Pages/Aboutpage/About"
+import Items from "./Pages/Shop/Items";
+import Login from "./Login/Login";
+import Signup from "./components/SignUp/SignUp";
 
 function Home() {
   return (
@@ -23,22 +26,26 @@ function Home() {
 
 function App() {
   return (
-    <Router>
-      <Navbar />
-      <main className="main-content">
-        <Routes>
-          <Route path="/" element={<PizzaHero />} />
-          <Route path="/about" element={<About />} />
-          {/* <Route path="/shop" element={<Shop />} /> */}
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-      </main>
-    </Router>
-
+    // <Router>
+    //   <Navbar />
+    //   <main className="main-content">
+    //     <Routes>
+    //       <Route path="/" element={<PizzaHero />} />
+    //       <Route path="/about" element={<About />} />
+    //       <Route path="/shop" element={<Items />} /> 
+    //       <Route path="/contact" element={<Contact />} />
+    //     </Routes>
+    //   </main>
     // </Router>
-    // <PizzaHero/>
-    //  <Contact/>
-      //  <OrderNow/>
+
+    // <Login/>
+     <Router>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+        {/* <Route path="/items" element={<Items />} /> */}
+      </Routes>
+    </Router>
   );
 }
 export default App;

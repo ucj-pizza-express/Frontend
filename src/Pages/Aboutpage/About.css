@@ -1,10 +1,9 @@
-
 .about-us-container {
   font-family: 'Georgia', serif;
   color: #fff;
   background-color: #000;
-  overflow: hidden;
-   margin-bottom: 0;
+  /* overflow: hidden; */
+  margin-bottom: 0;
   padding-bottom: 0;
 }
 
@@ -14,7 +13,7 @@
   background-image: url('/path-to-your-image.jpg');
   background-size: cover;
   background-position: center;
-  opacity: 0.5;
+  opacity: 2;
   overflow: hidden;
   background-color: black;
 }
@@ -27,33 +26,28 @@
   content: '';
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.6); /* dark overlay */
+  background-color: rgba(0, 0, 0, 0.6);
   z-index: 1;
 }
-
-
 
 .overlay {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #ffd700; /* gold */
+  color: #ffd700;
   text-align: center;
   z-index: 2;
   padding: 1rem 2rem;
 }
 
 .hero-title {
- font-size: 4rem;
+  font-size: 4rem;
   margin-bottom: 1rem;
   font-weight: bold;
-
   background: linear-gradient(90deg, #ff8c00, #f2fa03);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-
-  /* For Firefox */
   background-clip: text;
   color: transparent;
 }
@@ -63,7 +57,6 @@
   color: #ddd;
 }
 
-
 .section-title {
   text-align: center;
   font-size: 2rem;
@@ -72,10 +65,9 @@
 
 .orange-yellow {
   font-style: italic;
-    background: linear-gradient(90deg, #ff8c00, #f2fa03);
+  background: linear-gradient(90deg, #ff8c00, #f2fa03);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-
   background-clip: text;
   color: transparent;
 }
@@ -87,17 +79,76 @@
   max-width: 800px;
   border-radius: 12px;
   border: 1px solid #ce8c1b;
- box-shadow: 0 0 10px #ce8c1b;
- margin-bottom: 1rem;
+  box-shadow: 0 0 10px #ce8c1b;
+  
+  
 }
 
 .section-box ul {
   list-style-type: disc;
-  padding-left: 18rem;
+  padding-left: 5rem;
   margin: 1rem 0;
 }
 
 .section-box li {
   margin-bottom: 0.5rem;
   text-align: left;
+}
+
+/* ========================
+   Responsive Media Queries
+   ======================== */
+
+/* Tablets (≤768px) */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .breadcrumb {
+    font-size: 1rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .section-box ul {
+    padding-left: 2rem;
+  }
+
+  .overlay {
+    padding: 1rem;
+  }
+}
+
+/* Mobiles (≤480px) */
+@media (max-width: 480px) {
+  .hero-section {
+    height: 70vh;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .breadcrumb {
+    font-size: 0.9rem;
+  }
+
+  .section-title {
+    font-size: 1.2rem;
+  }
+
+  .section-box {
+    padding: 1rem;
+  }
+
+  .section-box ul {
+    padding-left: 1.5rem;
+  }
+
+  .overlay {
+    padding: 0.8rem;
+  }
 }
