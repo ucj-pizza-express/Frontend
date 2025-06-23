@@ -31,6 +31,9 @@ function Adminpanel() {
       </div>
     </Router>
   );
+
+
+  
 }
 
 function Dashboard() {
