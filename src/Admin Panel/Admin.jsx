@@ -32,7 +32,6 @@ function Adminpanel() {
     </Router>
   );
 
-
   
 }
 
