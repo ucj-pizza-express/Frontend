@@ -39,42 +39,20 @@ const sizePizzas = [
   },
 ];
 
-const crustPizzas = [
-  {
-    name: "Normal Crust Pizza",
-    description: "Traditional normal crust pizza with pepperoni and mushrooms.",
-    price: "Rs 2000.00",
-    image: Normalcrust,
-  },
-  {
-    name: "Cheesy Crust Pizza",
-    description: "Cheesy crust stuffed with molten cheese for an extra indulgent bite.",
-    price: "Rs 2200.00",
-    image: Cheesycrust,
-  },
-  {
-    name: "Sausage Crust Pizza",
-    description: "Crust filled with juicy sausages, perfect for meat lovers.",
-    price: "Rs 2300.00",
-    image: Sauage,
-  }
-];
 
 const toppings = [
-  { name: "Pepperoni", description: "Classic spicy pepperoni slices to top off your pizza.", price: "Rs 200.00", image: ToppingImg },
-  { name: "Extra Cheese", description: "Add extra gooey cheese.", price: "Rs 150.00", image: ToppingImg },
-  { name: "Mushroom", description: "Fresh mushrooms.", price: "Rs 120.00", image: ToppingImg },
-  { name: "Ham", description: "Sliced ham.", price: "Rs 180.00", image: ToppingImg },
-  { name: "Bacon", description: "Crispy bacon bits.", price: "Rs 200.00", image: ToppingImg },
-  { name: "Ground Beef", description: "Spiced ground beef.", price: "Rs 220.00", image: ToppingImg },
-  { name: "Jalapeno", description: "Spicy jalapeno slices.", price: "Rs 130.00", image: ToppingImg },
-  { name: "Pineapple", description: "Sweet pineapple chunks.", price: "Rs 140.00", image: ToppingImg },
-  { name: "Dried Shrimps", description: "Savory dried shrimps.", price: "Rs 250.00", image: ToppingImg },
-  { name: "Anchovies", description: "Salty anchovies.", price: "Rs 260.00", image: ToppingImg },
-  { name: "Sun Dried Tomatoes", description: "Rich sun dried tomatoes.", price: "Rs 180.00", image: ToppingImg },
-  { name: "Spinach", description: "Fresh spinach leaves.", price: "Rs 120.00", image: ToppingImg },
-  { name: "Roasted Garlic", description: "Aromatic roasted garlic.", price: "Rs 150.00", image: ToppingImg },
-  { name: "Shredded Chicken", description: "Tender shredded chicken.", price: "Rs 230.00", image: ToppingImg },
+  { name: "Pepperoni Pizza", description: "Classic spicy pepperoni slices to top off your pizza.", price: "Rs 1400.00", image: ToppingImg },
+  { name: "Extra Cheese Pizza", description: "Add extra gooey cheese.", price: "Rs 1500.00", image: ToppingImg },
+  { name: "Mushroom Pizza", description: "Fresh mushrooms.", price: "Rs 1200.00", image: ToppingImg },
+  { name: "Bacon Pizza", description: "Crispy bacon bits.", price: "Rs 2000.00", image: ToppingImg },
+  { name: "Ground Beef Pizza", description: "Spiced ground beef.", price: "Rs 2200.00", image: ToppingImg },
+  { name: "Pineapple Pizza", description: "Sweet pineapple chunks.", price: "Rs 1400.00", image: ToppingImg },
+  { name: "Dried Shrimps Pizza", description: "Savory dried shrimps.", price: "Rs 2500.00", image: ToppingImg },
+  { name: "Anchovies Pizza", description: "Salty anchovies.", price: "Rs 2600.00", image: ToppingImg },
+  { name: "Sun Dried Tomatoes Pizza", description: "Rich sun dried tomatoes.", price: "Rs 1800.00", image: ToppingImg },
+  { name: "Spinach Pizza", description: "Fresh spinach leaves.", price: "Rs 1200.00", image: ToppingImg },
+  { name: "Roasted Garlic Pizza", description: "Aromatic roasted garlic.", price: "Rs 1500.00", image: ToppingImg },
+  { name: "Shredded Chicken Pizza", description: "Tender shredded chicken.", price: "Rs 2300.00", image: ToppingImg },
 ];
 
 const drinks = [
@@ -128,33 +106,9 @@ const Items = () => {
         ))}
       </div>
 
-      {/* Crust Section */}
-      <h1 className="section-heading">Crust</h1>
-      <div className="section-items">
-        {crustPizzas.map((item, index) => (
-          <div className="card" key={index}>
-            <img src={item.image} alt={item.name} className="pizza-image" />
-            <h2 className="title">{item.name}</h2>
-            <p className="desc">{item.description}</p>
-            <div className="price">{item.price}</div>
-            <div className="quantity-section">
-              <label htmlFor={`crust-qty-${index}`}>Quantity:</label>
-              <input
-                type="number"
-                id={`crust-qty-${index}`}
-                name={`crust-qty-${index}`}
-                min="1"
-                max="10"
-                defaultValue="1"
-                className="qty-input"
-              />
-            </div>
-            <button className="order-btn">Order Now</button>
-          </div>
-        ))}
-      </div>
+
       {/* Toppings Section */}
-      <h1 className="section-heading">Toppings</h1>
+      <h1 className="section-heading">Pizzas</h1>
       <div className="section-items">
         {toppings.map((item, index) => (
           <div className="card" key={index}>
@@ -174,7 +128,7 @@ const Items = () => {
                 className="qty-input"
               />
             </div>
-            <button className="order-btn">Add Topping</button>
+            <button className="order-btn">Order Now</button>
           </div>
         ))}
       </div>
