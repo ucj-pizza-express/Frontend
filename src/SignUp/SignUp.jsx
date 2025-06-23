@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Signup.css';
 
+
 const Signup = () => {
   const [email, setEmail] = useState('');
   const [otpSent, setOtpSent] = useState(false);
@@ -52,7 +53,7 @@ const Signup = () => {
         )}
 
         <p className="login-text">
-          Already have an account? <a href="/">Login</a>
+          Already have an account? <a href="/login" >Login</a>
         </p>
       </div>
     </div>

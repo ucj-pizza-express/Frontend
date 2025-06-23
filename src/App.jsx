@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, BrowserRouter } from "react-router-dom";
 import Footer from "./Footer/Footer";
 import Testimonial from "./Footer/Testimonial";
 import Navbar from "./components/navbar"; 
@@ -13,7 +13,9 @@ import OrderNow from "./Pages/Order/Orderpage";
 import About from "./Pages/Aboutpage/About"
 import Items from "./Pages/Shop/Items";
 import Login from "./Login/Login";
-import Signup from "./components/SignUp/SignUp";
+import Signup from "./SignUp/SignUp";
+import AppRoutes from "./routes/AppRoutes";
+import Adminpanel from "./Admin Panel/Admin";
 
 function Home() {
   return (
@@ -38,14 +40,7 @@ function App() {
     //   </main>
     // </Router>
 
-    // <Login/>
-     <Router>
-      <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
-        {/* <Route path="/items" element={<Items />} /> */}
-      </Routes>
-    </Router>
+   <Adminpanel/>
   );
 }
 export default App;
