@@ -1,6 +1,8 @@
 import React from 'react';
 import './About.css';
 import Aboutimage from "../../assets/Aboutimage.png";
+import Footer from '../../Footer/Footer';
+import Testimonial from '../../Footer/Testimonial';
 
 const About = () => {
   return (
@@ -58,6 +60,8 @@ const About = () => {
         </p>
         </div>
       </section>  
+      <Testimonial/>
+      <Footer/>
     </div>
     )
 };

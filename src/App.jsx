@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, BrowserRouter } from "react-router-dom";
 import Footer from "./Footer/Footer";
 import Testimonial from "./Footer/Testimonial";
 import Navbar from "./components/navbar"; 
@@ -11,6 +11,11 @@ import CustomerFavourites from "./Pages/Homepage/CustomerFavourites"
 import Contact from "./Pages/ContactUS/Contact";
 import OrderNow from "./Pages/Order/Orderpage";
 import About from "./Pages/Aboutpage/About"
+import Items from "./Pages/Shop/Items";
+import Login from "./Login/Login";
+import Signup from "./SignUp/SignUp";
+import AppRoutes from "./routes/AppRoutes";
+import Adminpanel from "./Admin Panel/Admin";
 
 function Home() {
   return (
@@ -23,22 +28,19 @@ function Home() {
 
 function App() {
   return (
-    <Router>
-      <Navbar />
-      <main className="main-content">
-        <Routes>
-          <Route path="/" element={<PizzaHero />} />
-          <Route path="/about" element={<About />} />
-          {/* <Route path="/shop" element={<Shop />} /> */}
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-      </main>
-    </Router>
-
+    // <Router>
+    //   <Navbar />
+    //   <main className="main-content">
+    //     <Routes>
+    //       <Route path="/" element={<PizzaHero />} />
+    //       <Route path="/about" element={<About />} />
+    //       <Route path="/shop" element={<Items />} /> 
+    //       <Route path="/contact" element={<Contact />} />
+    //     </Routes>
+    //   </main>
     // </Router>
-    // <PizzaHero/>
-    //  <Contact/>
-      //  <OrderNow/>
+
+   <Adminpanel/>
   );
 }
 export default App;

@@ -2,8 +2,8 @@ import React from 'react';
 import { FaUser } from 'react-icons/fa';
 import '../App.css';
 import { Link } from "react-router-dom";
-import Contact from '../Pages/ContactUS/Contact';
-
+import Items from '../Pages/Shop/Items';
+import ProfileMenu from '../User/Profile';
 export default function Navbar() {
   return (
    <nav className="navbar">
@@ -13,11 +13,9 @@ export default function Navbar() {
         <Link to="/about">About</Link>
         <Link to="/shop">Shop</Link> {/* Assuming you'll create this later */}
         <Link to="/contact">Contact Us</Link>
-        <div className="user-link">
-          <FaUser className="user-icon" />
-        </div>
+        
+    <ProfileMenu />
       </div>
-
     </nav>
 
   );
