@@ -40,7 +40,7 @@ function App() {
     //   </main>
     // </Router>
 
-   <Adminpanel/>
+   <Signup/>
   );
 }
 export default App;
