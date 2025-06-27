@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Signup.css';
+import { Link } from 'react-router-dom';
 
 
 const Signup = () => {
@@ -7,16 +8,47 @@ const Signup = () => {
   const [otpSent, setOtpSent] = useState(false);
   const [otp, setOtp] = useState('');
 
-  const handleSendOTP = () => {
-    // Backend logic here to send OTP
-    setOtpSent(true);
-    alert("OTP sent to your email!");
-  };
+const handleSendOTP = async () => {
+  try {
+    const res = await fetch('http://localhost:5000/api/auth/send-otp', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email }),
+    });
 
-  const handleSignup = () => {
-    // Handle sign up logic here
-    alert("Account created successfully!");
-  };
+    const data = await res.json();
+    if (res.ok) {
+      setOtpSent(true);
+      alert(data.message);
+    } else {
+      alert(data.message);
+    }
+  } catch (error) {
+    alert("Error sending OTP");
+  }
+};
+
+
+ const handleSignup = async () => {
+  const password = document.querySelector('.password').value;
+  try {
+    const res = await fetch('http://localhost:5000/api/auth/signup', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, otp, password }),
+    });
+
+    const data = await res.json();
+    if (res.ok) {
+      alert(data.message);
+    } else {
+      alert(data.message);
+    }
+  } catch (error) {
+    alert("Error signing up");
+  }
+};
+
 
   return (
     <div className="signup-page">
@@ -53,7 +85,8 @@ const Signup = () => {
         )}
 
         <p className="login-text">
-          Already have an account? <a href="/login" >Login</a>
+          Already have an account? <Link to="/login">Login</Link>
+
         </p>
       </div>
     </div>
