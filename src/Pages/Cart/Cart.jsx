@@ -9,9 +9,12 @@ export default function Cart({ onClose }) {
   return (
     <div className="cart-overlay">
       <div className="cart-container">
-        <button className="close-button" onClick={onClose}>
-          &times;
-        </button>
+        <div className='cart-border'>
+          <div className="close-button" onClick={onClose}>
+            &times;
+          </div>
+        </div>
+       
         <h2>Your Cart</h2>
 
         {cartItems.length === 0 ? (
