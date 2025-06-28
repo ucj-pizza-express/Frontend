@@ -70,11 +70,31 @@
   margin-left: 5px;
 }
 
-.order-btn {
+.Addtocart-btn {
   background-color: #2dfd04b7;
   color: white;
   padding: 8px 15px;
   border: none;
   border-radius: 6px;
   cursor: pointer;
+}
+.cart-message {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 15px;
+  margin: 10px auto;
+  text-align: center;
+  border-radius: 8px;
+  width: fit-content;
+}
+
+.cart-message {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  margin: 20px auto;
+  border-radius: 8px;
+  width: fit-content;
+  text-align: center;
+  font-weight: bold;
 }

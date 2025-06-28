@@ -10,7 +10,7 @@ const Signup = () => {
 
 const handleSendOTP = async () => {
   try {
-    const res = await fetch('http://localhost:5000/api/auth/send-otp', {
+  const res = await fetch('http://localhost:5000/api/auth/signup', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email }),
@@ -32,7 +32,7 @@ const handleSendOTP = async () => {
  const handleSignup = async () => {
   const password = document.querySelector('.password').value;
   try {
-    const res = await fetch('http://localhost:5000/api/auth/signup', {
+    const res = await fetch('http://localhost:5000/api/signup', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email, otp, password }),

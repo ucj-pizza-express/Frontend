@@ -1,15 +1,17 @@
 import React from 'react';
 import { useCart } from './CartContext';
 import './Cart.css';
+import Footer from '../../Footer/Footer';
 
 export default function Cart({ onClose }) {
-  // Use cartItems and removeFromCart from context only (don't receive cartItems as prop)
   const { cartItems, removeFromCart } = useCart();
 
   return (
     <div className="cart-overlay">
       <div className="cart-container">
-        <button className="close-button" onClick={onClose}>&times;</button>
+        <button className="close-button" onClick={onClose}>
+          &times;
+        </button>
         <h2>Your Cart</h2>
 
         {cartItems.length === 0 ? (
@@ -19,12 +21,7 @@ export default function Cart({ onClose }) {
             {cartItems.map((item, index) => (
               <li key={index} className="cart-item">
                 <div>
-                  <strong>{item.pizza}</strong> x {item.quantity}
-                </div>
-                <div>
-                  Name: {item.name} <br />
-                  Address: {item.address} <br />
-                  Phone: {item.phone}
+                  <strong>{item.name}</strong> x {item.quantity}
                 </div>
                 <button
                   className="remove-button"
@@ -38,5 +35,7 @@ export default function Cart({ onClose }) {
         )}
       </div>
     </div>
+    
   );
+ 
 }
