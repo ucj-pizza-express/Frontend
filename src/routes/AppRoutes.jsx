@@ -9,7 +9,7 @@ import Login from '../Login/Login';
 import Signup from '../SignUp/SignUp';
 import Profile from '../User/Profile';
 import { CartProvider } from '../Pages/Cart/CartContext.jsx';  // Make sure path is correct
-
+import Checkout from '../Pages/Cart/Checkout.jsx';
 export default function AppRoutes() {
   return (
     <CartProvider>
@@ -23,7 +23,8 @@ export default function AppRoutes() {
         <Route path="/shop" element={<Items />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/profile" element={<Profile />} />
-
+        <Route path="/checkout" element={<Checkout />} />
+      
         {/* Optional route for home page */}
         <Route path="/home" element={<PizzaHero />} />
       </Routes>

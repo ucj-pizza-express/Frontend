@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Items.css";
 import Cart from "../Cart/Cart.jsx";
-import { useCart } from "../Cart/CartContext.jsx"; // optional if used
+import { useCart } from "../Cart/CartContext.jsx"; 
 import Footer from "../../Footer/Footer.jsx";
 
 // Image Imports
@@ -54,54 +54,29 @@ const otherItems = [
   { name: "Sour Cream Dip", description: "Smooth sour cream.", price: "Rs 90.00", image: ToppingImg }
 ];
 
-// Main Component
 const Items = () => {
   const [message, setMessage] = useState("");
   const [showCart, setShowCart] = useState(false);
+  const { addToCart } = useCart();
 
-  const handleAddToCart = async (item, quantity) => {
+  const handleAddToCart = (item, quantity) => {
     const cartItem = {
-      pizzaId: item._id || "000000000000000000000000", // placeholder
+      // pizzaId: item._id || null, // optional: if you have IDs
       name: item.name,
-      size: item.name.includes("Small") ? "Small" :
-            item.name.includes("Medium") ? "Medium" :
-            item.name.includes("Large") ? "Large" : "Regular",
+      size: item.name.includes("Small")
+        ? "Small"
+        : item.name.includes("Medium")
+        ? "Medium"
+        : item.name.includes("Large")
+        ? "Large"
+        : "Regular",
       quantity,
-      price: parseInt(item.price.replace("Rs ", "").replace(".00", "")) || 0
+      price: parseInt(item.price.replace("Rs ", "").replace(".00", "")) || 0,
     };
 
-    const orderPayload = {
-      customer: {
-        name: "Guest",
-        phone: "0771234567",
-        email: "guest@example.com",
-        address: {
-          street: "123 Main Street",
-          city: "Colombo",
-          postalCode: "10000"
-        }
-      },
-      items: [cartItem],
-      totalPrice: cartItem.price * quantity,
-      paymentStatus: "Pending",
-      deliveryStatus: "Pending"
-    };
-
-    try {
-        const response = await fetch("http://localhost:5000/api/order", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(orderPayload)
-      });
-
-      if (!response.ok) throw new Error("Order failed");
-
-      setMessage(`${item.name} added to cart & order placed!`);
-      setShowCart(true);
-    } catch (err) {
-      console.error("Order error:", err);
-      setMessage("Order failed.");
-    }
+    addToCart(cartItem);
+    setMessage(`${item.name} added to cart!`);
+    setShowCart(true);
 
     setTimeout(() => setMessage(""), 2000);
   };
