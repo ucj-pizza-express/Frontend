@@ -12,6 +12,9 @@ import { CartProvider } from '../Pages/Cart/CartContext.jsx';  // Make sure path
 import Checkout from '../Pages/Cart/Checkout.jsx';
 import ForgotPassword from '../Login/Forgetpassword.jsx';
 import UpdatePasswordForm from '../Login/updatepass.jsx';
+import Dashboard from '../admin/Dashboard.jsx';
+import Orders from '../admin/Orders.jsx';
+import Users from '../admin/Users.jsx';
 
 export default function AppRoutes() {
   return (
@@ -28,8 +31,15 @@ export default function AppRoutes() {
         <Route path="/profile" element={<Profile />} />
         <Route path="/forgotpassword" element={< ForgotPassword/>} />
         <Route path="/checkout" element={<Checkout />} />
-<Route path="/updatepassword/:token" element={<UpdatePasswordForm />} />
 
+        <Route path="/updatepassword/:token" element={<UpdatePasswordForm />} />
+
+
+          {/* admin */}
+        <Route path="/admin/dashboard" element={<Dashboard />} />
+        <Route path="/admin/orders" element={<Orders />} />
+        <Route path="/admin/users" element={<Users />} />
+        <Route path="/admin/items" element={<Items />} />
 
         {/* Optional route for home page */}
         <Route path="/home" element={<PizzaHero />} />

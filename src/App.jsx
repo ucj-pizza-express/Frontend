@@ -19,7 +19,15 @@ function App() {
   const hideNavbarPaths = [
     '/login',
     '/signup',
-    '/forgotpassword'
+    '/forgotpassword',
+    '/admin',
+    '/adminpanel',
+    '/dashboard',
+    '/orders',
+    '/users',
+    '/settings',
+    '/reports',
+    '/notifications'
   ];
 
   // Check if current path matches one of the above

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import './Login.css';
 
+
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -25,7 +26,15 @@ const Login = () => {
 
       if (res.ok) {
         alert(data.message);
-        navigate('/home'); // Redirect fixed here
+        // Save role to localStorage/sessionStorage if needed
+      localStorage.setItem('userRole', data.role);
+
+      // Redirect based on role
+      if (data.role === 'admin') {
+         navigate('/admin/dashboard');
+      } else {
+        navigate('/home');
+      }
       } else {
         alert(data.message || 'Login failed');
       }

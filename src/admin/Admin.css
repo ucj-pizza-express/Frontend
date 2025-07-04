@@ -1,0 +1,90 @@
+.admin-container {
+  display: flex;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.sidebar {
+  width: 220px;
+  background: linear-gradient(to bottom, #000000, #7e3d00eb);
+  color: #fff;
+  height: 100vh;
+  padding: 25px 20px;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar h2 {
+  margin-bottom: 30px;
+  font-size: 24px;
+  color: #ff9800;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 20px;
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 6px;
+  display: block;
+  transition: background 0.3s ease;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+  background-color: #ff9800;
+  color: #000;
+}
+
+.admin-content {
+  flex: 1;
+  padding: 30px;
+  background-color: #747474b1;
+  min-height: 100vh;
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-top: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+th {
+  background-color: #ff9800;
+  color: #fff;
+  padding: 15px;
+  text-align: left;
+}
+
+td {
+  padding: 14px;
+  border-top: 1px solid #ddd;
+}
+
+tr:hover td {
+  background-color: #fff8e1;
+}
+
+/* Optional Card Styles */
+.card {
+  background: linear-gradient(to right, #ffa726, #fb8c00);
+  color: white;
+  padding: 20px;
+  border-radius: 12px;
+  margin: 10px 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
