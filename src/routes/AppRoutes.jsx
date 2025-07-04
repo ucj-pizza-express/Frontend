@@ -10,6 +10,9 @@ import Signup from '../SignUp/SignUp';
 import Profile from '../User/Profile';
 import { CartProvider } from '../Pages/Cart/CartContext.jsx';  // Make sure path is correct
 import Checkout from '../Pages/Cart/Checkout.jsx';
+import ForgotPassword from '../Login/Forgetpassword.jsx';
+import UpdatePasswordForm from '../Login/updatepass.jsx';
+
 export default function AppRoutes() {
   return (
     <CartProvider>
@@ -23,8 +26,11 @@ export default function AppRoutes() {
         <Route path="/shop" element={<Items />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/forgotpassword" element={< ForgotPassword/>} />
         <Route path="/checkout" element={<Checkout />} />
-      
+<Route path="/updatepassword/:token" element={<UpdatePasswordForm />} />
+
+
         {/* Optional route for home page */}
         <Route path="/home" element={<PizzaHero />} />
       </Routes>

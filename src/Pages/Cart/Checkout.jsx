@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { useCart } from '../Cart/CartContext';
+import { useNavigate } from 'react-router-dom';
 import './Checkout.css';
 
-export default function Checkout({ onClose }) {
+export default function Checkout() {
   const { cartItems, clearCart } = useCart();
+  const navigate = useNavigate();
 
   const [form, setForm] = useState({
     name: '',
@@ -27,9 +29,14 @@ export default function Checkout({ onClose }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (submitting) return; // 🛑 Prevent double submits
+    if (submitting) return;
     if (!cartItems || cartItems.length === 0) {
       setMessage('🛒 Your cart is empty.');
+      return;
+    }
+
+    if (total <= 0) {
+      setMessage('⚠️ Invalid order: total amount is Rs 0.');
       return;
     }
 
@@ -59,8 +66,6 @@ export default function Checkout({ onClose }) {
       deliveryStatus: 'Pending',
     };
 
-    console.log("🛒 Submitting full payload:", JSON.stringify(payload, null, 2));
-
     try {
       const res = await fetch('http://localhost:5000/api/order', {
         method: 'POST',
@@ -81,7 +86,7 @@ export default function Checkout({ onClose }) {
         });
 
         setTimeout(() => {
-          if (onClose) onClose();
+          navigate('/shop');
         }, 2000);
       } else {
         const err = await res.json();
@@ -97,7 +102,7 @@ export default function Checkout({ onClose }) {
 
   const handleOverlayClick = (e) => {
     if (e.target.classList.contains('checkout-overlay')) {
-      onClose();
+      navigate('/items');
     }
   };
 
@@ -157,13 +162,23 @@ export default function Checkout({ onClose }) {
 
           <div className="checkout-total">Total: Rs {total}</div>
 
-          <button
-            type="submit"
-            className="place-order-btn"
-            disabled={submitting || cartItems.length === 0}
-          >
-            {submitting ? 'Placing Order...' : 'Place Order'}
-          </button>
+          <div className="checkout-buttons">
+            <button
+              type="submit"
+              className="place-order-btn"
+              disabled={submitting || cartItems.length === 0 || total === 0}
+            >
+              {submitting ? 'Placing Order...' : 'Place Order'}
+            </button>
+            <button
+              type="button"
+              className="cancel-btn"
+              onClick={() => navigate('/shop')}
+              disabled={submitting}
+            >
+              Cancel
+            </button>
+          </div>
         </form>
 
         {message && <p className="checkout-message">{message}</p>}

@@ -1,17 +1,40 @@
-// import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
+import React from 'react';
+import { BrowserRouter as Router, useLocation } from 'react-router-dom';
 import AppRoutes from './routes/AppRoutes';
-import Navbar from './components/navbar'; // if using
+import Navbar from './components/navbar';
 
-function App() {
+// Wrapper to allow hooks like useLocation outside Router
+function AppWrapper() {
   return (
     <Router>
-    <Navbar/>
-      <main>
-        <AppRoutes />
-      </main>
+      <App />
     </Router>
   );
 }
 
-export default App;
+function App() {
+  const location = useLocation();
+
+  // Define paths where Navbar should be hidden
+  const hideNavbarPaths = [
+    '/login',
+    '/signup',
+    '/forgotpassword'
+  ];
+
+  // Check if current path matches one of the above
+  const shouldHideNavbar = hideNavbarPaths.some(path =>
+    location.pathname.startsWith(path)
+  );
+
+  return (
+    <>
+      {!shouldHideNavbar && <Navbar />}
+      <main>
+        <AppRoutes />
+      </main>
+    </>
+  );
+}
+
+export default AppWrapper;

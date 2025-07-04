@@ -25,9 +25,9 @@ const Login = () => {
 
       if (res.ok) {
         alert(data.message);
-        navigate('/home');
+        navigate('/home'); // Redirect fixed here
       } else {
-        alert(data.message);
+        alert(data.message || 'Login failed');
       }
     } catch (error) {
       alert('Login failed. Server error.');
@@ -49,22 +49,26 @@ const Login = () => {
           onChange={(e) => setEmail(e.target.value)}
         />
 
-       <div className="password-wrapper">
-  <input
-    type={showPassword ? 'text' : 'password'}
-    placeholder="Password"
-    className="password"
-    value={password}
-    onChange={(e) => setPassword(e.target.value)}
-  />
-  <span
-    className="toggle-eye"
-    onClick={() => setShowPassword(!showPassword)}
-    role="button"
-  >
-    {showPassword ? '🙈' : '👁️'}
-  </span>
-</div>
+        <div className="password-wrapper">
+          <input
+            type={showPassword ? 'text' : 'password'}
+            placeholder="Password"
+            className="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <span
+            className="toggle-eye"
+            onClick={() => setShowPassword(!showPassword)}
+            role="button"
+          >
+            {showPassword ? '🙈' : '👁️'}
+          </span>
+        </div>
+
+        <p className="forgot-password">
+          <Link to="/forgotpassword">Forgot Password?</Link>
+        </p>
 
         <button onClick={handleLogin}>Login</button>
 
