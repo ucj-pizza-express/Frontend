@@ -2,7 +2,7 @@
 .admin-container {
   display: flex;
   font-family: 'Segoe UI', sans-serif;
-  width: 100%;
+  width: 100vw;
    
 }
 /* Individual card */
@@ -162,4 +162,139 @@ tr:hover td {
   margin: 10px 0;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   text-align: center;
+}
+
+
+/* Main container styling */
+.orders-container {
+  flex: 1;
+  padding: 40px 5%;
+  background-color: #000;
+  color: #fff;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* Heading */
+.orders-container h2 {
+  font-size: 32px;
+  font-weight: bold;
+  color: #ff9800;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Filter bar layout */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+/* Filter controls */
+.filter-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.filter-controls input,
+.filter-controls select {
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  min-width: 160px;
+  outline: none;
+}
+
+/* Buttons */
+.filter-btn,
+.export-btn {
+  padding: 10px 20px;
+  background-color: #ff9800;
+  border: none;
+  color: #000;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+  min-width: 100px;
+  text-align: center;
+}
+
+.filter-btn:hover,
+.export-btn:hover {
+  background-color: #e67e00;
+}
+
+/* Orders table wrapper */
+.table-wrapper {
+  overflow-x: auto;
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* Table */
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 800px;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(255, 152, 0, 0.3);
+}
+
+/* Header cells */
+.orders-table th {
+  background-color: #ff9800;
+  color: white;
+  padding: 14px 16px;
+  font-size: 14px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+/* Body cells */
+.orders-table td {
+  padding: 14px 16px;
+  font-size: 14px;
+  color: #000;
+  border-bottom: 1px solid #ddd;
+  white-space: nowrap;
+}
+
+/* Row hover */
+.orders-table tr:hover {
+  background-color: #fff3e0;
+}
+
+/* Responsive media query */
+@media (max-width: 768px) {
+  .orders-container {
+    padding: 20px 10px;
+  }
+
+  .filter-controls,
+  .filter-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filter-controls input,
+  .filter-controls select,
+  .filter-btn,
+  .export-btn {
+    width: 100%;
+  }
+
+  .orders-table {
+    min-width: 100%;
+    font-size: 13px;
+  }
 }
