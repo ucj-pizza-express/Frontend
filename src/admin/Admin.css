@@ -244,7 +244,7 @@ tr:hover td {
   width: 100%;
   border-collapse: collapse;
   min-width: 800px;
-  background-color: #fff;
+  background-color: #a0a0a07d;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(255, 152, 0, 0.3);
@@ -253,7 +253,7 @@ tr:hover td {
 /* Header cells */
 .orders-table th {
   background-color: #ff9800;
-  color: white;
+  color: rgb(0, 0, 0);
   padding: 14px 16px;
   font-size: 14px;
   text-align: left;
@@ -264,7 +264,7 @@ tr:hover td {
 .orders-table td {
   padding: 14px 16px;
   font-size: 14px;
-  color: #000;
+  color: #fefefe;
   border-bottom: 1px solid #ddd;
   white-space: nowrap;
 }
@@ -297,4 +297,56 @@ tr:hover td {
     min-width: 100%;
     font-size: 13px;
   }
+}
+ /*user management*/
+ .users-container {
+  flex: 1;
+  padding: 30px;
+  background-color: #383838;
+  height: 100vw;
+}
+
+.users-container h2 {
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: #ffac05;
+}
+
+.users-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: rgba(140, 140, 140, 0.363);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.users-table th,
+.users-table td {
+  padding: 14px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.users-table th {
+  background-color: #ff9800;
+  color: white;
+}
+
+.users-table tr:hover td {
+  background-color: #060606;
+}
+
+.delete-btn {
+  background-color: #e53935;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.delete-btn:hover {
+  background-color: #c62828;
 }
