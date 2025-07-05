@@ -15,6 +15,7 @@ import UpdatePasswordForm from '../Login/updatepass.jsx';
 import Dashboard from '../admin/Dashboard.jsx';
 import Orders from '../admin/Orders';
 import Userhandle from '../admin/Usermanagement.jsx';
+import Notifications from '../admin/Notifications.jsx';
 
 export default function AppRoutes() {
   return (
@@ -38,7 +39,8 @@ export default function AppRoutes() {
           {/* admin */}
         <Route path="/admin/dashboard" element={<Dashboard />} />
         <Route path="/admin/orders" element={<Orders/>}/>
-<Route path="/admin/users" element={<Userhandle />} />       {/* { // <Route path="/admin/items" element={<Items />} /> */} 
+        <Route path="/admin/users" element={<Userhandle />} />       {/* { // <Route path="/admin/items" element={<Items />} /> */} 
+        <Route path="/admin/notifications" element={<Notifications/>} />       {/* { // <Route path="/admin/items" element={<Items />} /> */} 
 
         {/* Optional route for home page */}
         <Route path="/home" element={<PizzaHero />} />
