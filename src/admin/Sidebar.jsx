@@ -9,8 +9,10 @@ export default function Sidebar() {
       <ul>
         <li><Link to="/admin/dashboard">Dashboard</Link></li>
         <li><Link to="/admin/orders">Orders</Link></li>
-        <li><Link to="/admin/users">Users</Link></li>
-        <li><Link to="/admin/items">Items</Link></li>
+        <li><Link to="/admin/products">Product</Link></li>
+        <li><Link to="/admin/reports">Report</Link></li>
+         <li><Link to="/admin/notifications">Notification</Link></li>
+
       </ul>
     </div>
   );

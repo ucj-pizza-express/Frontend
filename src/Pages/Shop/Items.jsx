@@ -86,7 +86,7 @@ const Items = () => {
       <h1 className="section-heading">{title}</h1>
       <div className="section-items">
         {items.map((item, index) => (
-          <div className="card" key={index}>
+          <div className="itemcard" key={index}>
             <img src={item.image} alt={item.name} className="pizza-image" />
             <h2 className="title">{item.name}</h2>
             <p className="desc">{item.description}</p>

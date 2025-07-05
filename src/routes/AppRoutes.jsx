@@ -14,7 +14,7 @@ import ForgotPassword from '../Login/Forgetpassword.jsx';
 import UpdatePasswordForm from '../Login/updatepass.jsx';
 import Dashboard from '../admin/Dashboard.jsx';
 import Orders from '../admin/Orders.jsx';
-import Users from '../admin/Users.jsx';
+import Users from '../admin/Reports.jsx';
 
 export default function AppRoutes() {
   return (
@@ -37,9 +37,9 @@ export default function AppRoutes() {
 
           {/* admin */}
         <Route path="/admin/dashboard" element={<Dashboard />} />
-        <Route path="/admin/orders" element={<Orders />} />
+        {/* <Route path="/admin/orders" element={<Orders />} />
         <Route path="/admin/users" element={<Users />} />
-        <Route path="/admin/items" element={<Items />} />
+        <Route path="/admin/items" element={<Items />} /> */}
 
         {/* Optional route for home page */}
         <Route path="/home" element={<PizzaHero />} />
