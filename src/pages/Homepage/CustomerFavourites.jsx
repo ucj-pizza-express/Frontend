@@ -1,6 +1,7 @@
 import React from 'react';
 import './CustomerFavourites.css';
 import pepperoniPizza from '../../assets/pepperonipizza.png'; // Adjust this path as needed
+import { Link } from 'react-router-dom';
 
 const pizzaData = [
   {
@@ -37,8 +38,9 @@ const CustomerFavourites = () => {
           </div>
         ))}
       </div>
-      <button className="explore-button">Explore More &gt;</button>
-    </section>
+<Link to="/shop">
+  <button className="explore-button">Explore More &gt;</button>
+</Link>    </section>
   );
 };
 

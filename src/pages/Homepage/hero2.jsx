@@ -1,6 +1,8 @@
 import React from "react";
 import bgImage from "../../assets/Home2.png";
 import "./Hero2.css"; 
+import { Link } from 'react-router-dom';
+
 const Hero2 = () => {
   return (
     <div
@@ -14,8 +16,9 @@ const Hero2 = () => {
         <p className="hero-subtitle">
           Choose your crust, topping, and sauces to make just the way you love.
         </p>
-        <button className="customize-btn">Start Customizing</button>
-      </div>
+<Link to="/shop">
+  <button className="customize-btn">Start Customizing</button>
+</Link>      </div>
     </div>
   );
 };
