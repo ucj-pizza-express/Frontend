@@ -61,6 +61,7 @@ body, html, #root {
   color: white;
   font-size: 0.95rem;
   transition: border 0.3s ease;
+  box-sizing: border-box;
 }
 
 .login-box input:focus {
@@ -104,3 +105,24 @@ body, html, #root {
 .signup-text a:hover {
   text-decoration: underline;
 }
+ /*show password*/
+ .password-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.password-wrapper input.password {
+  width: 100%;
+  padding-right: 40px; /* Space for the icon */
+  box-sizing: border-box;
+}
+
+.toggle-eye {
+  position: absolute;
+  top: 35%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 18px;
+}
+
